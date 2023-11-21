@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ItemResource;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Item;
@@ -13,8 +14,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return Item::orderBy('created_at', 'DESC')->get();
-
+        return ItemResource::collection(Item::orderBy('created_at', 'DESC')->get());
     }
 
 //    /**
