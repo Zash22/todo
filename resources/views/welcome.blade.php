@@ -3,7 +3,7 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @csrf
-    @vite('resources/js/app.js')
+    @vite(['resources/js/app.js'])
     <title>Laravel</title>
 </head>
 <body>
