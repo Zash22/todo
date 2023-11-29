@@ -20,6 +20,7 @@ class ItemResource extends JsonResource
             'name'=>$this->name,
             'completed' => $this->completed ?: null,
             'due_date' => (New Carbon())->addWeeks(2),
+            'id' => $this->id
         ];
 
     }
